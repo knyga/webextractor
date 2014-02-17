@@ -50,7 +50,7 @@ Installation via [Composer](http://getcomposer.org/)
 License
 -------
 
-Generito is licensed under the MIT license.
+WebExtractor is licensed under the MIT license.
 
 Sobit Akhmedov <sobit.akhmedov@gmail.com>
 

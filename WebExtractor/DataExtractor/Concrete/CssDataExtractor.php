@@ -66,7 +66,11 @@ class CssDataExtractor extends AbstractDataExtractor
         return $nodes->first()->attr($attrName);
     }
 
-    private function getNodes() {
+    /**
+     * Gettings nodes from content based on the provided selector.
+     * @return Crawler|null
+     */
+    public function getNodes() {
         $selector = $this->getSelector();
 
         $this->getCrawler()->clear();

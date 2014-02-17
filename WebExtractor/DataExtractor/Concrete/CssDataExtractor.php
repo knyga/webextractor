@@ -42,6 +42,31 @@ class CssDataExtractor extends AbstractDataExtractor
      */
     public function extract()
     {
+        $nodes = $this->getNodes();
+
+        if(null === $nodes) {
+            return null;
+        }
+
+        return $nodes->first()->text();
+    }
+
+    /**
+     * Extracts attribute content based on the provided selector.
+     *
+     * @return string|null Extracted data if found, null otherwise
+     */
+    public function extractAttribute($attrName) {
+        $nodes = $this->getNodes();
+
+        if(null === $nodes) {
+            return null;
+        }
+
+        return $nodes->first()->attr($attrName);
+    }
+
+    private function getNodes() {
         $selector = $this->getSelector();
 
         $this->getCrawler()->clear();
@@ -53,7 +78,7 @@ class CssDataExtractor extends AbstractDataExtractor
             return null;
         }
 
-        return $elements->first()->text();
+        return $elements;
     }
 
     /**

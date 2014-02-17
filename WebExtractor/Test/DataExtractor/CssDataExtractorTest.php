@@ -88,16 +88,18 @@ class CssDataExtractorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('three two', $this->extractor->setContent($html)->setSelector('#f > span:eq(2) > span:contains("two")')->extract());
     }
 
+    public function testExtractAttribute() {
+        $html = '<html><body><h1>This is <span class="getme" data="halo">test</span> HTML</h1></body></html>';
+        $this->assertEquals('halo', $this->extractor->setContent($html)->setSelector('.getme')->extractAttribute('data'));
+           
+    }
+
     /**
      * @expectedException \WebExtractor\Exception\ContentNotSetException
      */
     public function testExtractThrowsExceptionWithoutContent()
     {
         $this->extractor->setSelector('test selector')->extract();
-    }
-
-    public function testValidate() {
-           
     }
 
     /**

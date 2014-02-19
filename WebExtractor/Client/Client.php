@@ -12,6 +12,8 @@
 
 namespace WebExtractor\Client;
 
+use WebExtractor\Exception\HttpErrorException;
+
 use Diggin\Bridge\Guzzle\AutoCharsetEncodingPlugin\AutoCharsetEncodingPlugin;
 use Goutte\Client as GoutteClient;
 use DotConfig\Config;
@@ -126,12 +128,18 @@ class Client implements ClientInterface
      * @param array  $params GET parameters to send along with the request
      * 
      * @return array
+     * @throws HttpErrorException
      */
     public function getMeta($url, array $params = []) {
         $url = $this->createGetUrl($url, $params);
         $data = array();
         
-        $file = fopen($url,"r");
+        $file = @fopen($url,"r");
+
+        if(!$file) {
+            throw new HttpErrorException;
+        }
+
         $meta = stream_get_meta_data($file);
         fclose($file);
 

@@ -96,4 +96,12 @@ class ClientTest extends AbstractTestCase
 
         $this->assertEquals(96381, intval($meta['content-length']));
     }
+
+    /**
+     * @expectedException   \WebExtractor\Exception\HttpErrorException
+     */
+    public function test404Meta() {
+        $url = 'http://urlnotexists.com/nono';
+        $meta = $this->client->getMeta($url);
+    }
 }

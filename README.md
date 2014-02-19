@@ -37,7 +37,7 @@ Installation via [Composer](http://getcomposer.org/)
     ```json
     {
       "require" {
-        "knyga/webextractor": "1.0.*@dev"
+        "knyga/webextractor": "1.1.*@dev"
       }
     }
     ```

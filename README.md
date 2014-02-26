@@ -36,7 +36,7 @@ Installation via [Composer](http://getcomposer.org/)
  * Add a `composer.json` file to your project:
     ```json
     {
-      "require" {
+      "require": {
         "knyga/webextractor": "1.1.*@dev"
       }
     }

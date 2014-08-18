@@ -52,6 +52,6 @@ License
 
 WebExtractor is licensed under the MIT license.
 
-Sobit Akhmedov <sobit.akhmedov@gmail.com>
-
 Oleksandr Knyga <oleksandrknyga@gmail.com>
+
+Sobit Akhmedov <sobit.akhmedov@gmail.com>

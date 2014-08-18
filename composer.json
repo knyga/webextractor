@@ -7,12 +7,12 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Sobit Akhmedov",
-            "email": "sobit.akhmedov@gmail.com"
-        },
-        {
             "name": "Oleksandr Knyga",
             "email": "oleksandrknyga@gmail.com"
+        },
+        {
+            "name": "Sobit Akhmedov",
+            "email": "sobit.akhmedov@gmail.com"
         }
     ],
     "minimum-stability": "stable",

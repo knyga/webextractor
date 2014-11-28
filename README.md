@@ -36,9 +36,15 @@ Installation via [Composer](http://getcomposer.org/)
  * Add a `composer.json` file to your project:
     ```json
     {
-      "require": {
-        "knyga/webextractor": "1.1.2.*@dev"
-      }
+        "repositories": [
+            {
+                "url": "https://github.com/knyga/convertapi-php",
+                "type": "git"
+            }
+        ],
+        "require": {
+            "confuzzledduck/convertapi-php": "dev-master"
+        }
     }
     ```
 

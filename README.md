@@ -32,19 +32,13 @@ Installation via [Composer](http://getcomposer.org/)
     ```bash
     curl -sS https://getcomposer.org/installer | php
     ```
-
+    
  * Add a `composer.json` file to your project:
     ```json
     {
-        "repositories": [
-            {
-                "url": "https://github.com/knyga/convertapi-php",
-                "type": "git"
-            }
-        ],
-        "require": {
-            "confuzzledduck/convertapi-php": "dev-master"
-        }
+      "require": {
+        "knyga/webextractor": "1.1.2.*@dev"
+      }
     }
     ```
 
